@@ -42,7 +42,7 @@
             <td>1</td>
         </tr>
     </table><br>
-    <p>Polub nas <img src="pliki7/icon-off.png" alt=""></p><br>
+    <p>Polub nas <img onclick="iconChange()" id="icon" src="pliki7/icon-off.png" alt=""></p><br>
     <a href="https://pixabay.com" target="_blank">Odkryj więcej zdjęć</a>
     </div>
 </div>
@@ -70,6 +70,15 @@
                 } 
           }
 
+        function iconChange() {
+            let image = document.querySelector("#icon")
+            if (image.src.match("pliki7/icon-off.png")) {
+                image.src = "pliki7/icon-on.png"
+            }
+            else {
+                image.src = "pliki7/icon-off.png"
+            }
+        }
     </script>
 </body>
 </html>
